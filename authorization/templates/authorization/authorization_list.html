@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>All Authorizations</title>
+</head>
+<body>
+	<h2>Authorizations</h2>
+{% for auth in object_list %}
+<p>
+<span>AuthorizationID : <a href=" {% url 'auth_details' auth.pk %}">{{auth.authorizationid}}</a></span>
+<span>Member ID : {{auth.memberid}}</span>
+<span>NDC : {{auth.ndc_no}}</span>
+<span>Create Date: {{auth.createdate}}</span>
+</p>
+
+{% endfor %}
+</body>
+</html>
